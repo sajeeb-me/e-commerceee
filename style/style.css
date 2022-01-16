@@ -33,6 +33,12 @@ span{
     justify-content: space-between;
     align-items: center;
 }
+#nav-toggler{
+    display: none;
+}
+.fi-xnsuxl-three-bars-solid{
+    display: none;
+}
 .navbar a{
     text-decoration: none;
     color: var(--font-color);
@@ -144,6 +150,7 @@ span{
 }
 .text-style{
     font-family: 'Neonderthaw', cursive;
+    font-size: 90px;
 }
 .paragraph{
     width: 90%;
@@ -218,6 +225,78 @@ span{
   padding-left: 0;
 }
 
-
-
-
+/* responsive for max width 688 */
+@media only screen and (max-width:688px) {
+    .logo{
+        order: 2;
+    }
+    .fi-xnsuxl-three-bars-solid{
+        display: block;
+        order: 1;
+    }
+    .nav-icon{
+        order:3;
+    }
+    .fi-xnsuhl-search{
+        display: none;
+    }
+    .navbar{
+        position: relative;
+    }
+    .navbar .navigatios{
+        width: 100%;
+        position: absolute;
+        top: -300px;
+        z-index: 1;
+        background-color: var(--font-color);
+        border-radius: 10px;
+    }
+    .navbar .navigatios > ul{
+        flex-direction: column;
+    }
+    .navbar .navigatios ul li{
+        margin: 10px auto;
+    }
+    .navbar .navigatios ul li a{
+        color: white;
+        font-weight: 400;   
+    }
+    .offers ul{
+        display: none;
+    }
+    .products-sub-nav{
+        display: none;
+    }
+    #nav-toggler:checked ~ .navigatios{
+        top: 35px;
+        transition: 0.5s;
+    }
+    .width80{
+        width: 90%;
+    }
+    .width50{
+        width: 100%;
+    }
+    .header-container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-container .header-image img{
+        width: 100%;
+    }
+    .header-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading-one{
+        font-size: 20px;
+    }
+    .text-style{
+        font-size: 50px;
+        margin-top: 20px;
+    }
+    .paragraph{
+        text-align: center;
+    }
+}
